@@ -1,0 +1,10 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+back_office:
+    path: /back-office
+    controller: App\Controller\BackOfficeController::index
+
