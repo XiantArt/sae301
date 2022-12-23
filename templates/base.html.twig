@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="../public/css/main.css">
+    <title>{% block title %}Troyes Events{% endblock %}</title>
+</head>
+<body>
+{% block navbar %}
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block footer %}
+    <footer>
+        Copyright {{ "now"|date("Y") }} My Website
+    </footer>
+{% endblock %}
+</body>
+</html>

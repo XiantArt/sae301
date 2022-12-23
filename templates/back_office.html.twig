@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Back Office{% endblock %}
+
+{% block body %}
+    <h1 class="back">Welcome to the Back Office</h1>
+
+    {# Display a list of users #}
+    <table class="back">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    {# Add links to edit and delete actions #}
+                    <a href="{{ path('edit_user', {'id': user.id}) }}">Edit</a>
+                    <a href="{{ path('delete_user', {'id': user.id}) }}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

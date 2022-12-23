@@ -8,3 +8,10 @@ back_office:
     path: /back-office
     controller: App\Controller\BackOfficeController::index
 
+edit_user:
+    path: /back-office/users/{id}/edit
+    controller: App\Controller\BackOfficeController::editUser
+
+delete_user:
+    path: /back-office/users/{id}/delete
+    controller: App\Controller\BackOfficeController::deleteUser
